@@ -2,15 +2,18 @@
 #include <stdio.h>
 
 int main (int argc, char **argv) {
-  int i, start=1, stop=100;
+  int i, start=1, stop=100, x=0;
   for (i=start; i<=stop; i++) {
-    if ((i % 3) == 0 && (i % 5) == 0)
-      printf("FizzBuzz");
-    else if ((i % 3) == 0)
+    x=0;
+    if ((i % 3) == 0) {
       printf("Fizz");
-    else if ((i % 5) == 0)
+      x=1;
+    }
+    if ((i % 5) == 0) {
       printf("Buzz");
-    else
+      x=1;
+    }
+    if (!x)
       printf("%d", i);
     if (i != stop)
       printf(",");
