@@ -5,7 +5,7 @@
 all: fizzbuzz
 
 fizzbuzz: fizzbuzz.c
-	gcc -o $@ $<
+	gcc -Wall -o $@ $<
 
 clean:
 	rm -rf *.o fizzbuzz
