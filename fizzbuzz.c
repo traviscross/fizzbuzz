@@ -7,8 +7,7 @@ int main (int argc, char **argv) {
     start=atoi(argv[1]);
   if (argc > 2)
     stop=atoi(argv[2]);
-  for (i=start; i<=stop; i++) {
-    x=0;
+  for (i=start; i<=stop; i++, x=0) {
     if ((i % 3) == 0) {
       printf("Fizz");
       x=1;
